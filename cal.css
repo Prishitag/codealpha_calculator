@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+}
+
+.calculator {
+    border: 1px solid #010307;
+    padding: 20px;
+    border-radius: 15px;
+    background: transparent;
+    box-shadow: 0 0 25px #000;
+}
+
+input {
+    color: white;
+    width: 320px;
+    border: none;
+    padding: 24px;
+    margin: 10px;
+    background: transparent;
+    box-shadow: 0px 3px 15px #0a0a0a;
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+    outline: none; /* Remove default focus outline */
+    border-radius: 15px;
+}
+
+input::placeholder {
+    color: #fff;
+    
+}
+
+input:focus {
+    box-shadow: 0 0 15px rgba(0, 160, 200, 0.5);
+}
+
+button {
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 30px;
+    background: transparent;
+    box-shadow: 10px 2px 18px #000;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+button.equal {
+    background-color: #e67315d7;
+}
+
+button:active {
+    background: rgba(0, 160, 200, 0.363);
+    transform: translate(2px, 2px);
+}
+
+@media (max-width: 400px) {
+    input {
+        width: 90%; /* Make input responsive */
+    }
+
+    button {
+        width: 50px; /* Adjust button size for smaller screens */
+        height: 50px;
+        font-size: 18px;
+    }
+}
